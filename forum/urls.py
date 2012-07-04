@@ -20,7 +20,8 @@ APP_PATH = os.path.dirname(__file__)
 
 core_urls = (
     url(r'^$', app.readers.index, name='index'),
-    url(r'^%s(.*)' % _('nimda/'), admin.site.root),
+    #url(r'^%s(.*)' % _('nimda/'), admin.site.root),
+    url(r'^%s(.*)' % _('nimda/'), include(admin.site.urls)),
                         
     url(r'^sitemap.xml$', 'forum.sitemap.index', {'sitemaps': sitemaps}),
     url(r'^sitemap-(?P<section>.+)\.xml$', 'forum.sitemap.sitemap', {'sitemaps': sitemaps}),
