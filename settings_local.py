@@ -7,7 +7,7 @@ LOG_FILENAME = 'django.osqa.log'
 #for logging
 import logging
 logging.basicConfig(
-    filename=os.path.join(SITE_SRC_ROOT, 'log', LOG_FILENAME),
+    filename=os.path.join('/var/log', 'osqa', LOG_FILENAME),
     level=logging.ERROR,
     format='%(pathname)s TIME: %(asctime)s MSG: %(filename)s:%(funcName)s:%(lineno)d %(message)s',
 )
