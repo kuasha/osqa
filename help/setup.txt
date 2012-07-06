@@ -1,9 +1,34 @@
 django version 1.4 does not work (yet)
 
+wget http://python.org/ftp/python/2.7/Python-2.7.tgz
+./configure --prefix=/opt/python2.7
+make
+make install
+ln -s /opt/python2.7/bin/python /usr/bin/python
+
+
+yum install git
+yum install mod_wsgi
+
+yum install python-setuptools 
 curl https://raw.github.com/pypa/pip/master/contrib/get-pip.py | python
+
+easy_install ElementTree Markdown html5lib
+
+yum install gcc
 yum install python-devel
 yum install mysql-devel
 pip install MySQL-python
 
+wget https://www.djangoproject.com/download/1.3.1/tarball/
+
+env GIT_SSL_NO_VERIFY=true git clone https://github.com/kuasha/osqa.git
+
+create database osqa;
+create user 'osqa'@'localhost' identified by 'password';
+grant all on *.* to 'osqa'@'localhost';
+
+mkdir /var/log/osqa
+chmod 777 /var/log/osqa
 
 
