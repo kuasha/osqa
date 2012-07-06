@@ -23,15 +23,6 @@ DEBUG_TOOLBAR_CONFIG = {
 TEMPLATE_DEBUG = DEBUG
 INTERNAL_IPS = ('127.0.0.1',)
 
-
-DATABASE_NAME = ''             # Or path to database file if using sqlite3.
-DATABASE_USER = ''               # Not used with sqlite3.
-DATABASE_PASSWORD = ''               # Not used with sqlite3.
-DATABASE_ENGINE = ''  #mysql, etc
-DATABASE_HOST = ''
-DATABASE_PORT = ''
-
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
