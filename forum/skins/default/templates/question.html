@@ -193,6 +193,12 @@
                         {% endif %}
                     </div>
                     {% endspaceless %}
+                    <div class="keyboards">
+                       <input name="keyboard" id="phonetickb" onclick="makePhoneticEditor('editor');" type="radio" checked="checked">Phonetic&nbsp;
+                       <input name="keyboard" id="unijoykb" onclick="makeUnijoyEditor('editor');" type="radio">Unijoy&nbsp;
+                       <input name="keyboard" id="engliskkb" onclick="makeEnglishEditor('editor');" type="radio">English
+                    </div>
+                    <hr />
                 </div>
                 {% comment %}
                 {% if not request.user.is_authenticated %}
@@ -318,5 +324,8 @@
 {% endblock %}
 
 {% block endjs %}
+<script>
+makePhoneticEditor('editor');
+</script>
 {% endblock %}
 <!-- end question.html -->

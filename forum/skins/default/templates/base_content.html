@@ -65,6 +65,22 @@
         {% block forejs %}{% endblock %}
         <link rel="search" type="application/opensearchdescription+xml" href="{% url opensearch %}" title="{{ settings.APP_SHORT_NAME }} Search" />
         {% loadregistry head_content %}{% endloadregistry %}
+
+        <script language="javascript" type="text/javascript" src="http://lekhoni.com/scripts/bijoyunicode.js"></script>
+        <script language="javascript" type="text/javascript" src="http://lekhoni.com/scripts/phoneticunicode.js"></script>
+        <script language="javascript" type="text/javascript" src="http://lekhoni.com/scripts/makeenglish.js"></script>
+       <script type="text/javascript" language="javascript">
+            function setEngKeyboard(txtTitle, txtBody, txtTag) {
+                makeEnglishEditor(txtTitle); makeEnglishEditor(txtBody); makeEnglishEditor(txtTag);
+            }
+            function setUnibijoy(txtTitle, txtBody, txtTag) {
+                makeUnijoyEditor(txtTitle); makeUnijoyEditor(txtBody); makeUnijoyEditor(txtTag);
+            }
+            function setPhonetic(txtTitle, txtBody, txtTag) {
+                makePhoneticEditor(txtTitle); makePhoneticEditor(txtBody); makePhoneticEditor(txtTag);
+            }
+   </script>
+
     </head>
     <body>
         <div class="notify" style="display:none">

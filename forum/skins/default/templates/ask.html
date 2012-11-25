@@ -89,7 +89,24 @@
 
 {% block content %}
 <div id="main-bar" class="headNormal">
+<table>
+<tr>
+<td width="60%">
 	{% trans "Ask a question" %}
+</td>
+<td>
+<div class="keyboards">
+                                        
+    <input name="keyboard" id="phonetickb" onclick="setPhonetic('editor','id_title', 'id_tags');" type="radio" checked="checked">Phonetic&nbsp;
+                                        
+    <input name="keyboard" id="unijoykb" onclick="setUnibijoy('editor','id_title', 'id_tags');" type="radio">Unijoy&nbsp;
+                                        
+    <input name="keyboard" id="engliskkb" onclick="setEngKeyboard('editor','id_title', 'id_tags');" type="radio">English
+                                    
+</div>
+</td>
+</tr>
+</table>                                
 </div>
 <div id="main-body" class="ask-body">
     <div id="askform">
@@ -172,5 +189,8 @@
 {% endblock %}
 
 {% block endjs %}
+<script>
+setPhonetic('editor','id_title', 'id_tags');
+</script>
 {% endblock %}
 <!-- end template ask.html -->
