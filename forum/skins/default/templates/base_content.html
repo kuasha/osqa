@@ -71,13 +71,19 @@
         <script language="javascript" type="text/javascript" src="http://lekhoni.com/scripts/makeenglish.js"></script>
        <script type="text/javascript" language="javascript">
             function setEngKeyboard(txtTitle, txtBody, txtTag) {
-                makeEnglishEditor(txtTitle); makeEnglishEditor(txtBody); makeEnglishEditor(txtTag);
+                makeEnglishEditor(txtTitle); 
+                makeEnglishEditor(txtBody);
+                if(txtTag){makeEnglishEditor(txtTag);}
             }
             function setUnibijoy(txtTitle, txtBody, txtTag) {
-                makeUnijoyEditor(txtTitle); makeUnijoyEditor(txtBody); makeUnijoyEditor(txtTag);
+                makeUnijoyEditor(txtTitle); 
+                makeUnijoyEditor(txtBody); 
+                if(txtTag){makeUnijoyEditor(txtTag);}
             }
             function setPhonetic(txtTitle, txtBody, txtTag) {
-                makePhoneticEditor(txtTitle); makePhoneticEditor(txtBody); makePhoneticEditor(txtTag);
+                makePhoneticEditor(txtTitle); 
+                makePhoneticEditor(txtBody); 
+                if(txtTag){makePhoneticEditor(txtTag);}
             }
    </script>
 

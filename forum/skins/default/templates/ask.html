@@ -97,11 +97,11 @@
 <td>
 <div class="keyboards">
                                         
-    <input name="keyboard" id="phonetickb" onclick="setPhonetic('editor','id_title', 'id_tags');" type="radio" checked="checked">Phonetic&nbsp;
+    <input name="keyboard" id="phonetickb" onclick="setPhonetic('editor','id_title');" type="radio" checked="checked">Phonetic&nbsp;
                                         
-    <input name="keyboard" id="unijoykb" onclick="setUnibijoy('editor','id_title', 'id_tags');" type="radio">Unijoy&nbsp;
+    <input name="keyboard" id="unijoykb" onclick="setUnibijoy('editor','id_title');" type="radio">Unijoy&nbsp;
                                         
-    <input name="keyboard" id="engliskkb" onclick="setEngKeyboard('editor','id_title', 'id_tags');" type="radio">English
+    <input name="keyboard" id="engliskkb" onclick="setEngKeyboard('editor','id_title');" type="radio">English
                                     
 </div>
 </td>
@@ -190,7 +190,7 @@
 
 {% block endjs %}
 <script>
-setPhonetic('editor','id_title', 'id_tags');
+setPhonetic('editor','id_title');
 </script>
 {% endblock %}
 <!-- end template ask.html -->
