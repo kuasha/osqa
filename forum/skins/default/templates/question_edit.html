@@ -88,7 +88,19 @@
         
 {% block content %}
 <div id="main-bar" class="headNormal">
-    {% block edittype %}{% trans "Edit question" %}{% endblock %} [<a href="{{ question.get_absolute_url }}">{% trans "back" %}</a>]
+  <table>
+    <tr>
+  
+    <td>{% block edittype %}{% trans "Edit question" %}{% endblock %} [<a href="{{ question.get_absolute_url }}">{% trans "back" %}</a>]</td>
+    <td>
+        <div class="keyboards">
+            <input name="keyboard" id="phonetickb" onclick="setPhonetic('editor','id_title');" type="radio" checked="checked">Phonetic&nbsp;
+            <input name="keyboard" id="unijoykb" onclick="setUnibijoy('editor','id_title');" type="radio">Unijoy&nbsp;
+            <input name="keyboard" id="engliskkb" onclick="setEngKeyboard('editor','id_title');" type="radio">English
+        </div>
+    </td>
+    </tr>
+  </table>
 </div>
 <div id="main-body" class="ask-body">
     <div id="askform">
@@ -162,5 +174,8 @@
 {% endblock %}
 
 {% block endjs %}
+<script>
+setPhonetic('editor','id_title');
+</script>
 {% endblock %}
 <!-- end question_edit.html -->
